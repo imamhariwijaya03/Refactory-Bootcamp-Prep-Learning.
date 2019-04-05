@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 5 Film Rating</title>
+</head>
+
+<body>
+<h1>No 5 Film Rating</h1>
+
+<script type="text/javascript">
+
+  var input = prompt("Masukkan input :");
+
+  if (input >= 21)
+  {
+  x="DEWASA";
+  }
+  else if (input >= 13 && input <=20)
+  {
+  x="REMAJA";
+  }
+  else if (input >= 9 && input <=12)
+  {
+  x="BIMBINGAN ORANG TUA";
+  }
+  else if (input >= 1 && input <=8)
+  {
+  x="SEMUA USIA";
+  }
+    else
+  {
+  x="input range TIDAK BOLEH MINUS dan 0";
+  }
+
+
+  document.write("input : " + input + "<br/>");
+  document.write("output : " + x + "<br/>");
+
+
+</script>
+
+</body>
+</html>

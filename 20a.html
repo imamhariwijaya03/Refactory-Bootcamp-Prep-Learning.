@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 20 Data Type Detector</title>
+</head>
+
+<body>
+<h1>No 20 Data Type Detector</h1>
+
+<script type="text/javascript">
+
+
+getVarType = (function () {
+    var typeof_map = {
+      'undefined' : 'Undefined',
+      'boolean'   : 'Boolean',
+      'number'    : 'Number',
+      'string'    : 'String',
+      'function'  : 'Function',
+
+      'Undefined' : 'Undefined',
+      'Null'      : 'Null',
+      'Boolean'   : 'Boolean',
+      'Number'    : 'Number',
+      'String'    : 'String',
+      'Function'  : 'Function',
+      'Array'     : 'Array',
+      'StyleSheetList' : 'Array'
+    };
+
+    return function( data ) {
+      var type, type_str;
+
+      if ( data === null      ) { return 'Null'; }
+      if ( data === undefined ) { return 'Undefined'; }
+
+      type     = typeof( data );
+      type_str = typeof_map[ type ];
+
+      if ( type_str ) { return type_str; }
+
+      type = {}.toString.call( data ).slice( 8, -1 );
+      return typeof_map[ type ]
+        || ( data instanceof Array ? 'Array' :
+        ( data.propertyIsEnumerable(0) && data.length !== undefined
+          ? 'Array' : 'Object' )
+        );
+    };
+  }());
+
+
+    document.write(getVarType(1.25));
+
+
+</script>
+
+</body>
+</html>

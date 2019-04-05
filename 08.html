@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 8 Ganjil/Genap/Kelipatanl</title>
+</head>
+
+<body>
+<h1>No 8 Ganjil/Genap/Kelipatanl</h1>
+
+<script type="text/javascript">
+
+    var x;
+    var y;
+    var z;
+    var a;
+    var i;
+    for (i=0; i<=999;i++){
+
+      x=i%2;
+      y=i%5;
+      z=i%100;
+
+      if (x>0 && y==0){
+        a="ganjil kelipatan 5";
+        document.write( i +". " + a +"<br>");
+      }
+      else if (x==0 && y==0 && z>0) {
+        a="genap kelipatan 5";
+        document.write( i +". " + a +"<br>");
+      }
+      else if (x==0 && y==0 && z==0) {
+        a="kelipatan 100";
+        document.write( i +". " + a +"<br>");
+      }
+      else if (x>0) {
+        a="ganjil";
+        document.write( i +". " + a +"<br>");
+      }
+      else {
+        a="genap";
+        document.write( i +". " + a +"<br>");
+      }
+
+
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>
