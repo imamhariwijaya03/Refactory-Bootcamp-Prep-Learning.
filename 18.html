@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 18 Duplicates Remover</title>
+</head>
+
+<body>
+<h1>No 18 Duplicates Remover</h1>
+
+<script type="text/javascript">
+
+  const kota = ['Jakarta', 'Aceh', 'Malang', 'Medan', 'Bontang', 'Jogja', 'Jakarta', 'Bandung', 'Malang', 'Solo', 'Palembang', 'Bandung'];
+
+  function removeDuplicates (arr) {
+    var deduper = {}
+    arr.forEach(function (item) {
+        deduper[item] = null;
+    });
+    return Object.keys(deduper);
+}
+  document.write(kota.removeDuplicates);
+
+
+
+</script>
+
+</body>
+</html>

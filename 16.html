@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 16 palindrome</title>
+</head>
+
+<body>
+<h1>No 16 palindroem</h1>
+
+<script type="text/javascript">
+
+  function palindrome(str) {
+ var re = /[^A-Za-z0-9]/g;
+ str = str.toLowerCase().replace(re, '');
+ var len = str.length;
+ for (var i = 0; i < len/2; i++) {
+   if (str[i] !== str[len - 1 - i]) {
+       return "bukan palindrome";
+   }
+ }
+ return "palindrome";
+}
+document.write(palindrome("A man, a plan, a canal. Panama"));
+
+
+
+</script>
+
+</body>
+</html>

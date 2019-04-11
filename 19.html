@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 19 function rekursif</title>
+</head>
+
+<body>
+<h1>No 19 function rekursif</h1>
+
+<script type="text/javascript">
+
+  function fungsiRekursif(n){
+    if ( n === 0) {
+      return;
+    }
+     document.write(n +",");
+    return fungsiRekursif(n-1);
+}
+var n = prompt("Masukkan input :");
+fungsiRekursif(n);
+
+</script>
+
+</body>
+</html>
