@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>No 24 LIFO</title>
+</head>
+
+<body>
+<h1>No 24 LIFO</h1>
+    <table>
+            <tr>
+                <td>Enter the Input</td>
+                <td><input type="text" id="inputtext" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" id="add" onclick="addRecord();">Add array </button>
+                <button type="button" id="display" onclick="myFunction();">remove no 1</button>
+                </td>
+            </tr>
+    </table>
+   <div id='values'></div>
+
+<script type="text/javascript">
+values = [];
+
+function addRecord() {
+  var inp = document.getElementById('inputtext');
+  values.push(inp.value);
+  inp.value = "";
+  document.getElementById("values").innerHTML = values.join(", ");
+}
+
+function myFunction() {
+  values.pop();
+  document.getElementById("values").innerHTML = values;
+}
+
+</script>
+
+</body>
+</html>
